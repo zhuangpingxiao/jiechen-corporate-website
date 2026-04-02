@@ -115,6 +115,8 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 }
 .btn-register:hover { background: var(--primary-hover); color: #fff; }
 
+.visible-mobile { display: none; }
+
 /* ============================
    HERO CAROUSEL
    ============================ */
@@ -714,8 +716,14 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   }
   .nav-links a.nav-active::after { display: none; }
 
-  .auth-links { gap: 12px; margin-right: 20px; }
-  .btn-register { padding: 5px 14px; font-size: 12px; }
+  .hidden-mobile { display: none !important; }
+  .visible-mobile { 
+    display: flex; gap: 12px; 
+    margin-top: 24px; padding-top: 24px; 
+    border-top: 1px solid rgba(255,255,255,0.05); 
+  }
+  .visible-mobile .btn-login { font-size: 15px; color: rgba(255,255,255,0.8); }
+  .visible-mobile .btn-register { padding: 8px 18px; font-size: 14px; }
 
   .hero-section { height: 75vh; }
   .hero-eyebrow { font-size: 11px; letter-spacing: 4px; }
