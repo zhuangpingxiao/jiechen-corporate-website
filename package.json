@@ -1,0 +1,9 @@
+{
+  "name": "jiechen-corporate-website",
+  "version": "1.0.0",
+  "description": "杰晨科技高端官网",
+  "scripts": {
+    "dev": "npx serve .",
+    "build": "echo \"Nothing to build\""
+  }
+}
