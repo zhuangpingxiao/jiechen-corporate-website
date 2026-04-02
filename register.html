@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>注册 — 杰晨科技</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" rel="stylesheet" />
+  <style>
+    .auth-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0a0a;
+      position: relative;
+      overflow: hidden;
+    }
+    .auth-page-bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0.4;
+    }
+    .auth-card {
+      position: relative;
+      z-index: 2;
+      width: 420px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 48px 40px;
+    }
+    .auth-card-logo {
+      width: 48px; height: 48px;
+      background: var(--primary);
+      border-radius: 12px;
+      display: grid; place-items: center;
+      color: #fff; font-weight: 700; font-size: 18px;
+      margin: 0 auto 28px;
+      font-family: var(--font-en);
+    }
+    .auth-card h1 {
+      color: #fff;
+      font-size: 24px; font-weight: 600;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .auth-card .subtitle {
+      text-align: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+      margin-bottom: 36px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .form-group input {
+      width: 100%;
+      height: 48px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 0 16px;
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.3s;
+      font-family: var(--font-cn);
+    }
+    .form-group input::placeholder {
+      color: rgba(255,255,255,0.25);
+    }
+    .form-group input:focus {
+      border-color: var(--primary);
+    }
+    .form-row {
+      display: flex; gap: 12px;
+    }
+    .form-row .form-group {
+      flex: 1;
+    }
+    .form-options {
+      display: flex;
+      align-items: flex-start;
+      margin-bottom: 28px;
+    }
+    .form-options label {
+      color: rgba(255,255,255,0.5);
+      font-size: 12px;
+      display: flex; align-items: flex-start; gap: 6px;
+      cursor: pointer;
+      line-height: 1.5;
+    }
+    .form-options label input[type="checkbox"] {
+      accent-color: var(--primary);
+      width: 14px; height: 14px;
+      margin-top: 2px;
+      flex-shrink: 0;
+    }
+    .form-options label a {
+      color: var(--primary);
+    }
+    .submit-btn {
+      width: 100%;
+      height: 48px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px; font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-family: var(--font-cn);
+    }
+    .submit-btn:hover {
+      background: var(--primary-hover);
+    }
+    .auth-footer {
+      text-align: center;
+      margin-top: 24px;
+      color: rgba(255,255,255,0.4);
+      font-size: 14px;
+    }
+    .auth-footer a {
+      color: var(--primary);
+      font-weight: 500;
+    }
+    .back-home {
+      position: fixed;
+      top: 24px; left: 24px;
+      z-index: 100;
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+      display: flex; align-items: center; gap: 4px;
+      transition: color 0.3s;
+    }
+    .back-home:hover { color: #fff; }
+    .back-home span { font-size: 20px; }
+    .password-strength {
+      height: 4px;
+      border-radius: 2px;
+      margin-top: 8px;
+      background: rgba(255,255,255,0.08);
+      overflow: hidden;
+    }
+    .password-strength-bar {
+      height: 100%;
+      width: 0%;
+      border-radius: 2px;
+      transition: all 0.3s;
+    }
+    .strength-weak { width: 33%; background: #ef4444; }
+    .strength-medium { width: 66%; background: #f59e0b; }
+    .strength-strong { width: 100%; background: #10b981; }
+  </style>
+</head>
+<body>
+  <a href="./index.html" class="back-home">
+    <span class="material-symbols-outlined">arrow_back</span> 返回首页
+  </a>
+
+  <div class="auth-page">
+    <img src="./public/hero_slide2.png" class="auth-page-bg" alt="bg" />
+
+    <div class="auth-card">
+      <div class="auth-card-logo"><img src="./public/logo.png" alt="杰晨" style="width:100%;height:100%;object-fit:cover;border-radius:12px" /></div>
+      <h1>创建账号</h1>
+      <p class="subtitle">注册 杰晨科技 账号，开启数字化之旅</p>
+
+      <form onsubmit="return false;">
+        <div class="form-row">
+          <div class="form-group">
+            <label>姓</label>
+            <input type="text" placeholder="请输入姓氏" />
+          </div>
+          <div class="form-group">
+            <label>名</label>
+            <input type="text" placeholder="请输入名字" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>邮箱地址</label>
+          <input type="email" placeholder="your@company.com" id="regEmail" />
+        </div>
+        <div class="form-group">
+          <label>手机号码</label>
+          <input type="tel" placeholder="+86 请输入手机号" />
+        </div>
+        <div class="form-group">
+          <label>设置密码</label>
+          <input type="password" placeholder="至少 8 位，含字母与数字" id="regPassword" oninput="checkStrength(this.value)" />
+          <div class="password-strength">
+            <div class="password-strength-bar" id="strengthBar"></div>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>确认密码</label>
+          <input type="password" placeholder="请再次输入密码" />
+        </div>
+        <div class="form-options">
+          <label>
+            <input type="checkbox" />
+            我已阅读并同意 <a href="#">《用户服务协议》</a> 和 <a href="#">《隐私政策》</a>
+          </label>
+        </div>
+        <button type="submit" class="submit-btn">注 册</button>
+      </form>
+
+      <div class="auth-footer">
+        已有账号？ <a href="./login.html">立即登录</a>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function checkStrength(val) {
+      const bar = document.getElementById('strengthBar');
+      bar.className = 'password-strength-bar';
+      if (val.length === 0) { bar.style.width = '0%'; return; }
+      if (val.length < 6) { bar.classList.add('strength-weak'); }
+      else if (val.length < 10 || !/[A-Z]/.test(val) || !/[0-9]/.test(val)) { bar.classList.add('strength-medium'); }
+      else { bar.classList.add('strength-strong'); }
+    }
+  </script>
+</body>
+</html>

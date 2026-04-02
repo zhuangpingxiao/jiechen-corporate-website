@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>杰晨科技 — 企业级互联网服务开发商</title>
+  <meta name="description" content="杰晨科技是领先的企业级互联网服务开发商，提供 SaaS、云原生、AI 大模型、移动端全栈解决方案。" />
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+SC:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ==================== FIXED HEADER ==================== -->
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="./index.html" class="logo">
+        <img src="./public/logo.png" alt="杰晨科技" class="logo-img" />
+        <span class="logo-text">杰晨科技</span>
+      </a>
+      <nav class="nav-links">
+        <a href="./index.html" class="nav-active">首页</a>
+        <a href="./solutions.html">解决方案</a>
+        <a href="./cloud-native.html">云原生</a>
+        <a href="./data-brain.html">数字大脑</a>
+        <a href="./ai-model.html">AI 大模型</a>
+        <a href="./cloud-service.html">云服务</a>
+        <a href="./iot.html">IoT</a>
+        <a href="./platform.html">开放平台</a>
+      </nav>
+      <div class="auth-links">
+        <a href="./login.html" class="btn-login">登录</a>
+        <a href="./register.html" class="btn-register">免费注册</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+
+  <!-- ==================== HERO CAROUSEL ==================== -->
+  <section class="hero-section" id="heroSection">
+    <div class="slider-track">
+      <!-- Slide 1 -->
+      <div class="slide active" data-index="0">
+        <img src="./public/hero_jc1.png" alt="数字化基座" />
+        <div class="slide-content">
+          <p class="hero-eyebrow">JIECHEN TECHNOLOGY</p>
+          <h1>以技术之光<br/>照亮数字未来</h1>
+          <p class="hero-desc">全栈自研 · 云原生架构 · AI 智能驱动</p>
+          <a href="./solutions.html" class="hero-btn">探索我们的服务 <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="slide" data-index="1">
+        <img src="./public/hero_jc2.png" alt="云原生" />
+        <div class="slide-content">
+          <p class="hero-eyebrow">CLOUD NATIVE</p>
+          <h1>云原生 全链路架构</h1>
+          <p class="hero-desc">毫秒级响应，支撑亿级用户触达</p>
+          <a href="./cloud-native.html" class="hero-btn">深入了解 <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="slide" data-index="2">
+        <img src="./public/hero_slide3.png" alt="万物智联" />
+        <div class="slide-content">
+          <p class="hero-eyebrow">AI & IoT</p>
+          <h1>无界 全场景智联</h1>
+          <p class="hero-desc">构建您的万物互联版图</p>
+          <a href="./iot.html" class="hero-btn">立即体验 <span class="material-symbols-outlined">arrow_forward</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Controls -->
+    <button class="carousel-arrow arrow-left" id="prevBtn"><span class="material-symbols-outlined">chevron_left</span></button>
+    <button class="carousel-arrow arrow-right" id="nextBtn"><span class="material-symbols-outlined">chevron_right</span></button>
+
+    <!-- Dots -->
+    <div class="carousel-dots" id="carouselDots">
+      <span class="dot active" data-index="0"></span>
+      <span class="dot" data-index="1"></span>
+      <span class="dot" data-index="2"></span>
+    </div>
+
+    <!-- Scroll hint -->
+    <div class="scroll-hint">
+      <span class="material-symbols-outlined">expand_more</span>
+    </div>
+  </section>
+
+  <!-- ==================== BRAND STATS STRIP ==================== -->
+  <section class="brand-strip">
+    <div class="brand-strip-inner">
+      <div class="brand-stat"><span class="stat-num">500+</span><span class="stat-label">企业客户</span></div>
+      <div class="brand-stat"><span class="stat-num">98%</span><span class="stat-label">交付满意度</span></div>
+      <div class="brand-stat"><span class="stat-num">30+</span><span class="stat-label">行业覆盖</span></div>
+      <div class="brand-stat"><span class="stat-num">7×24</span><span class="stat-label">技术保障</span></div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 1: SaaS ==================== -->
+  <section class="content-section section-white">
+    <div class="section-inner center-layout">
+      <div class="section-label"><span class="label-tag">杰晨 PRO</span></div>
+      <h2>全渠道 SaaS 数据中台</h2>
+      <p class="section-desc">一站式多端覆盖方案，驱动业务智能增长</p>
+      <a href="#" class="section-cta">立即体验 <span class="material-symbols-outlined">arrow_forward</span></a>
+      <div class="section-image">
+        <img src="./public/section_saas.png" alt="SaaS 数据中台" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 2: Flutter ==================== -->
+  <section class="content-section section-gray">
+    <div class="section-inner split-layout">
+      <div class="split-text">
+        <p class="split-eyebrow">CROSS PLATFORM</p>
+        <h2 class="accent-title">Flutter</h2>
+        <h3>移动端跨平台架构</h3>
+        <p>一套代码、多端同发。性能满血，一步到位。<br/>从 Android 到 iOS，从桌面到 Web，全平台覆盖。</p>
+        <a href="#" class="section-cta">了解架构 <span class="material-symbols-outlined">arrow_forward</span></a>
+      </div>
+      <div class="split-image">
+        <img src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?auto=format&fit=crop&w=800&q=80" alt="Mobile App" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SECTION 3: AI ==================== -->
+  <section class="content-section section-white">
+    <div class="section-inner split-layout reverse">
+      <div class="split-text">
+        <p class="split-eyebrow">ARTIFICIAL INTELLIGENCE</p>
+        <h2>企业私有 AI 大模型</h2>
+        <p>海量数据挖掘，智能内核驱动。<br/>从数据到决策，用技术重新定义效率。</p>
+        <a href="./ai-model.html" class="section-cta">立即咨询 <span class="material-symbols-outlined">arrow_forward</span></a>
+      </div>
+      <div class="split-image">
+        <img src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?auto=format&fit=crop&w=800&q=80" alt="Server AI" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== STRIP BANNER ==================== -->
+  <section class="strip-banner">
+    <div class="strip-inner">
+      <span class="material-symbols-outlined strip-icon">security</span>
+      <h3>高级代码审计与安全防护周</h3>
+      <a href="#" class="strip-btn">立即预约</a>
+    </div>
+  </section>
+
+  <!-- ==================== CINEMATIC (Full Dark) ==================== -->
+  <section class="cinematic-section">
+    <img src="./public/hero_slide3.png" class="cinematic-bg" alt="生态" />
+    <div class="cinematic-overlay"></div>
+    <div class="cinematic-content">
+      <p class="cinematic-eyebrow">智慧互联 · 云端一体化</p>
+      <h2>「云管边端 全生态体系」</h2>
+      <p class="cinematic-sub">驱动下一代企业数字生命力</p>
+      <a href="#" class="cta-link light">了解体系 <span class="material-symbols-outlined">arrow_forward</span></a>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand">
+        <img src="./public/logo.png" alt="杰晨科技" class="footer-brand-logo" />
+        <p class="footer-brand-name">杰晨科技</p>
+        <p class="footer-brand-slogan">以技术之光，照亮数字未来</p>
+      </div>
+      <div class="footer-columns">
+        <dl>
+          <dt>产品服务</dt>
+          <dd><a href="#">App 开发</a></dd>
+          <dd><a href="#">小程序开发</a></dd>
+          <dd><a href="#">Web 平台</a></dd>
+          <dd><a href="#">云服务器</a></dd>
+        </dl>
+        <dl>
+          <dt>技术支持</dt>
+          <dd><a href="#">帮助中心</a></dd>
+          <dd><a href="#">API 文档</a></dd>
+          <dd><a href="#">售后政策</a></dd>
+          <dd><a href="#">服务网点</a></dd>
+        </dl>
+        <dl>
+          <dt>开发者</dt>
+          <dd><a href="#">开源组件</a></dd>
+          <dd><a href="#">开发工具</a></dd>
+          <dd><a href="#">插件市场</a></dd>
+          <dd><a href="#">认证培训</a></dd>
+        </dl>
+        <dl>
+          <dt>关于杰晨</dt>
+          <dd><a href="#">了解我们</a></dd>
+          <dd><a href="#">加入我们</a></dd>
+          <dd><a href="#">投资者关系</a></dd>
+          <dd><a href="#">社会责任</a></dd>
+        </dl>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <p class="legal-links"><a href="./index.html">首页</a><a href="#">政企服务</a><a href="#">隐私政策</a><a href="#">用户协议</a></p>
+        <p class="copyright">© 2026 杰晨科技 (JieChen Technology) 版权所有 &nbsp; 京ICP备10xxxxxx号</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="./main.js"></script>
+</body>
+</html>

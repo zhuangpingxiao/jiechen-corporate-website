@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IoT 生态 — 杰晨科技</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" rel="stylesheet" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="./index.html" class="logo">
+        <img src="./public/logo.png" alt="杰晨科技" class="logo-img" />
+        <span class="logo-text">杰晨科技</span>
+      </a>
+      <nav class="nav-links">
+        <a href="./index.html">首页</a>
+        <a href="./solutions.html">解决方案</a>
+        <a href="./cloud-native.html">云原生</a>
+        <a href="./data-brain.html">数字大脑</a>
+        <a href="./ai-model.html">AI 大模型</a>
+        <a href="./cloud-service.html">云服务</a>
+        <a href="./iot.html" class="nav-active">IoT</a>
+        <a href="./platform.html">开放平台</a>
+      </nav>
+      <div class="auth-links">
+        <a href="./login.html" class="btn-login">登录</a>
+        <a href="./register.html" class="btn-register">免费注册</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+
+  <section class="page-hero">
+    <img src="./public/hero_banner2.png" alt="IoT" />
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <h1>IoT 物联网生态</h1>
+      <p>设备连接、边缘计算、数据上云的一体化物联网平台</p>
+    </div>
+  </section>
+
+  <section class="content-section section-white">
+    <div class="section-inner">
+      <div class="sub-section-head">
+        <h2>万物互联，云端协同</h2>
+        <p>从芯片到云端，打通物理世界与数字世界的壁垒</p>
+      </div>
+      <div class="cards-grid">
+        <div class="feature-card">
+          <div class="card-icon orange"><span class="material-symbols-outlined">settings_input_antenna</span></div>
+          <h3>设备接入</h3>
+          <p>支持 MQTT / CoAP / HTTP 等主流协议，百万级设备同时在线，毫秒级消息下发。</p>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon teal"><span class="material-symbols-outlined">developer_board</span></div>
+          <h3>边缘计算</h3>
+          <p>在网络边缘部署轻量推理与规则引擎，减少云端往返延迟，实现本地即时决策。</p>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon blue"><span class="material-symbols-outlined">view_in_ar</span></div>
+          <h3>数字孪生</h3>
+          <p>1:1 构建物理设备的虚拟映射，实时监控状态、模拟运行、预测故障。</p>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon green"><span class="material-symbols-outlined">electric_bolt</span></div>
+          <h3>能源管理</h3>
+          <p>智能抄表、用电分析、碳排放追踪。助力企业实现"双碳"战略目标。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="content-section section-gray">
+    <div class="section-inner split-layout reverse">
+      <div class="split-text">
+        <h2>智慧城市解决方案</h2>
+        <p>智能路灯、环境监测、智慧停车、安防联动……<br/>我们帮助城市管理者构建高效、绿色、安全的数字化城市底座。</p>
+        <a href="#" class="section-cta">查看案例 <span class="material-symbols-outlined">arrow_forward</span></a>
+      </div>
+      <div class="split-image">
+        <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800&q=80" alt="IoT Hardware" />
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-block">
+    <h2>开启物联新时代</h2>
+    <p>免费接入 100 台设备，体验物联网平台全部能力</p>
+    <a href="#" class="cta-btn">免费试用</a>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <p class="legal-links"><a href="./index.html">首页</a><a href="#">隐私政策</a><a href="#">用户协议</a></p>
+        <p class="copyright">© 2026 杰晨科技 (JieChen Technology) 版权所有</p>
+      </div>
+    </div>
+  </footer>
+  <script src="./page.js"></script>
+</body>
+</html>

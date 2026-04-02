@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>登录 — 杰晨科技</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" rel="stylesheet" />
+  <style>
+    .auth-page {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: #0a0a0a;
+      position: relative;
+      overflow: hidden;
+    }
+    .auth-page-bg {
+      position: absolute; inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+      opacity: 0.4;
+    }
+    .auth-card {
+      position: relative;
+      z-index: 2;
+      width: 420px;
+      background: rgba(255,255,255,0.05);
+      backdrop-filter: blur(24px);
+      -webkit-backdrop-filter: blur(24px);
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 20px;
+      padding: 48px 40px;
+    }
+    .auth-card-logo {
+      width: 48px; height: 48px;
+      background: var(--primary);
+      border-radius: 12px;
+      display: grid; place-items: center;
+      color: #fff; font-weight: 700; font-size: 18px;
+      margin: 0 auto 28px;
+      font-family: var(--font-en);
+    }
+    .auth-card h1 {
+      color: #fff;
+      font-size: 24px; font-weight: 600;
+      text-align: center;
+      margin-bottom: 8px;
+    }
+    .auth-card .subtitle {
+      text-align: center;
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+      margin-bottom: 36px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group label {
+      display: block;
+      color: rgba(255,255,255,0.6);
+      font-size: 13px;
+      margin-bottom: 8px;
+    }
+    .form-group input {
+      width: 100%;
+      height: 48px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px;
+      padding: 0 16px;
+      color: #fff;
+      font-size: 15px;
+      outline: none;
+      transition: border-color 0.3s;
+      font-family: var(--font-cn);
+    }
+    .form-group input::placeholder {
+      color: rgba(255,255,255,0.25);
+    }
+    .form-group input:focus {
+      border-color: var(--primary);
+    }
+    .form-options {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px;
+    }
+    .form-options label {
+      color: rgba(255,255,255,0.5);
+      font-size: 13px;
+      display: flex; align-items: center; gap: 6px;
+      cursor: pointer;
+    }
+    .form-options label input[type="checkbox"] {
+      accent-color: var(--primary);
+      width: 14px; height: 14px;
+    }
+    .form-options a {
+      color: var(--primary);
+      font-size: 13px;
+    }
+    .submit-btn {
+      width: 100%;
+      height: 48px;
+      background: var(--primary);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 16px; font-weight: 500;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-family: var(--font-cn);
+    }
+    .submit-btn:hover {
+      background: var(--primary-hover);
+    }
+    .auth-footer {
+      text-align: center;
+      margin-top: 24px;
+      color: rgba(255,255,255,0.4);
+      font-size: 14px;
+    }
+    .auth-footer a {
+      color: var(--primary);
+      font-weight: 500;
+    }
+    .divider-line {
+      display: flex;
+      align-items: center;
+      margin: 28px 0 20px;
+      color: rgba(255,255,255,0.25);
+      font-size: 12px;
+    }
+    .divider-line::before,
+    .divider-line::after {
+      content: '';
+      flex: 1;
+      height: 1px;
+      background: rgba(255,255,255,0.08);
+    }
+    .divider-line::before { margin-right: 16px; }
+    .divider-line::after { margin-left: 16px; }
+    .social-login {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+    }
+    .social-btn {
+      width: 48px; height: 48px;
+      border-radius: 12px;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(255,255,255,0.08);
+      display: grid; place-items: center;
+      color: rgba(255,255,255,0.5);
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .social-btn:hover {
+      background: rgba(255,255,255,0.12);
+      color: #fff;
+    }
+    .back-home {
+      position: fixed;
+      top: 24px; left: 24px;
+      z-index: 100;
+      color: rgba(255,255,255,0.5);
+      font-size: 14px;
+      display: flex; align-items: center; gap: 4px;
+      transition: color 0.3s;
+    }
+    .back-home:hover { color: #fff; }
+    .back-home span { font-size: 20px; }
+  </style>
+</head>
+<body>
+  <a href="./index.html" class="back-home">
+    <span class="material-symbols-outlined">arrow_back</span> 返回首页
+  </a>
+
+  <div class="auth-page">
+    <img src="./public/hero_slide3.png" class="auth-page-bg" alt="bg" />
+
+    <div class="auth-card">
+      <div class="auth-card-logo"><img src="./public/logo.png" alt="杰晨" style="width:100%;height:100%;object-fit:cover;border-radius:12px" /></div>
+      <h1>欢迎回来</h1>
+      <p class="subtitle">登录您的 杰晨科技 账号</p>
+
+      <form onsubmit="return false;">
+        <div class="form-group">
+          <label>邮箱 / 手机号</label>
+          <input type="text" placeholder="请输入邮箱或手机号" id="loginEmail" />
+        </div>
+        <div class="form-group">
+          <label>密码</label>
+          <input type="password" placeholder="请输入密码" id="loginPassword" />
+        </div>
+        <div class="form-options">
+          <label><input type="checkbox" checked /> 记住我</label>
+          <a href="#">忘记密码？</a>
+        </div>
+        <button type="submit" class="submit-btn">登 录</button>
+      </form>
+
+      <div class="divider-line">其他登录方式</div>
+      <div class="social-login">
+        <button class="social-btn"><span class="material-symbols-outlined">chat_bubble</span></button>
+        <button class="social-btn"><span class="material-symbols-outlined">qr_code_2</span></button>
+        <button class="social-btn"><span class="material-symbols-outlined">fingerprint</span></button>
+      </div>
+
+      <div class="auth-footer">
+        还没有账号？ <a href="./register.html">立即注册</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

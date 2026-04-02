@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>云服务 — 杰晨科技</title>
+  <link rel="stylesheet" href="./style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@200" rel="stylesheet" />
+</head>
+<body>
+  <header class="header" id="header">
+    <div class="header-inner">
+      <a href="./index.html" class="logo">
+        <img src="./public/logo.png" alt="杰晨科技" class="logo-img" />
+        <span class="logo-text">杰晨科技</span>
+      </a>
+      <nav class="nav-links">
+        <a href="./index.html">首页</a>
+        <a href="./solutions.html">解决方案</a>
+        <a href="./cloud-native.html">云原生</a>
+        <a href="./data-brain.html">数字大脑</a>
+        <a href="./ai-model.html">AI 大模型</a>
+        <a href="./cloud-service.html" class="nav-active">云服务</a>
+        <a href="./iot.html">IoT</a>
+        <a href="./platform.html">开放平台</a>
+      </nav>
+      <div class="auth-links">
+        <a href="./login.html" class="btn-login">登录</a>
+        <a href="./register.html" class="btn-register">免费注册</a>
+      </div>
+      <button class="menu-toggle" id="menuToggle" aria-label="菜单">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+  <div class="mobile-nav-overlay" id="mobileOverlay"></div>
+
+  <section class="page-hero">
+    <img src="./public/hero_cloud.png" alt="云服务" />
+    <div class="page-hero-overlay"></div>
+    <div class="page-hero-content">
+      <h1>云服务</h1>
+      <p>弹性计算、存储、网络、安全的全栈云基础设施</p>
+    </div>
+  </section>
+
+  <section class="content-section section-white">
+    <div class="section-inner">
+      <div class="sub-section-head">
+        <h2>全栈云基础设施</h2>
+        <p>按需使用、按量计费，让企业专注业务而非运维</p>
+      </div>
+      <div class="cards-grid">
+        <div class="feature-card">
+          <div class="card-icon blue"><span class="material-symbols-outlined">cloud</span></div>
+          <h3>弹性云主机</h3>
+          <p>多规格实例，秒级启停，支持自动伸缩组。覆盖从轻量应用到高性能计算的全部需求。</p>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon green"><span class="material-symbols-outlined">storage</span></div>
+          <h3>对象存储</h3>
+          <p>高可用、低成本的海量非结构化数据存储。可用性 99.999999999%，CDN 全球分发。</p>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon orange"><span class="material-symbols-outlined">dns</span></div>
+          <h3>云数据库</h3>
+          <p>MySQL、PostgreSQL、Redis、MongoDB 全托管服务，自动备份、读写分离、跨区容灾。</p>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon purple"><span class="material-symbols-outlined">shield</span></div>
+          <h3>安全防护</h3>
+          <p>DDoS 防护、WAF、SSL 证书、主机安全。多层安全体系保障您的业务永续在线。</p>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon teal"><span class="material-symbols-outlined">lan</span></div>
+          <h3>私有网络</h3>
+          <p>VPC 虚拟网络隔离、VPN 互联、负载均衡、弹性公网 IP，灵活的网络架构设计。</p>
+        </div>
+        <div class="feature-card">
+          <div class="card-icon amber"><span class="material-symbols-outlined">rocket_launch</span></div>
+          <h3>Serverless</h3>
+          <p>函数计算、事件驱动，无需管理服务器。代码上传即运行，真正的按调用次数计费。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="stat-bar">
+    <div class="stat-bar-inner">
+      <div class="stat-item"><h3>30+</h3><p>全球数据中心</p></div>
+      <div class="stat-item"><h3>99.99%</h3><p>SLA 可用性</p></div>
+      <div class="stat-item"><h3>T级</h3><p>DDoS 防御能力</p></div>
+      <div class="stat-item"><h3>< 10ms</h3><p>跨区延迟</p></div>
+    </div>
+  </section>
+
+  <section class="cta-block">
+    <h2>新用户专享优惠</h2>
+    <p>注册即领 ¥2000 代金券，体验全线云产品</p>
+    <a href="#" class="cta-btn">立即注册</a>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <div class="footer-legal">
+        <p class="legal-links"><a href="./index.html">首页</a><a href="#">隐私政策</a><a href="#">用户协议</a></p>
+        <p class="copyright">© 2026 杰晨科技 (JieChen Technology) 版权所有</p>
+      </div>
+    </div>
+  </footer>
+  <script src="./page.js"></script>
+</body>
+</html>
