@@ -16,8 +16,8 @@
   --border: #ebebeb;
   --content-max: 1200px;
   --header-height: 64px;
-  --font-cn: 'Noto Sans SC', 'PingFang SC', 'Microsoft YaHei', sans-serif;
-  --font-en: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-cn: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', sans-serif;
+  --font-en: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   --radius: 14px;
   --shadow-card: 0 8px 32px rgba(0,0,0,0.06);
