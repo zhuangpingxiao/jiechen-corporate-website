@@ -15,7 +15,7 @@
   --bg-dark: #0a0a0c;
   --border: #ebebeb;
   --content-max: 1200px;
-  --header-height: 64px;
+  --header-height: 80px;
   --font-cn: 'Noto Sans SC', 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', '微软雅黑', sans-serif;
   --font-en: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   --transition: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -77,13 +77,13 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 .logo {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   transition: opacity var(--transition);
 }
-.logo:hover { opacity: 0.85; }
+.logo:hover { opacity: 0.9; }
 .logo-img {
-  width: 36px; height: 36px;
-  border-radius: 8px;
+  width: 44px; height: 44px;
+  border-radius: 11px;
   object-fit: cover;
 }
 .logo-text {
@@ -94,10 +94,10 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 }
 
 /* Nav */
-.nav-links { display: flex; gap: 28px; }
+.nav-links { display: flex; gap: 32px; }
 .nav-links a {
-  color: rgba(255,255,255,0.7);
-  font-size: 14px; font-weight: 400;
+  color: rgba(255,255,255,0.75);
+  font-size: 15px; font-weight: 500;
   transition: color var(--transition);
   position: relative;
 }
@@ -114,7 +114,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 .auth-links { display: flex; align-items: center; gap: 10px; }
 .btn-login, .btn-register {
   display: inline-flex; align-items: center; justify-content: center;
-  height: 38px; border-radius: 8px; font-size: 14px; font-weight: 500;
+  height: 42px; border-radius: 9px; font-size: 15px; font-weight: 500;
   transition: all var(--transition); letter-spacing: 0.5px;
 }
 .btn-login {
