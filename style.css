@@ -692,8 +692,9 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
    ============================ */
 @media (max-width: 768px) {
   .menu-toggle { display: flex; }
-  .header-inner { padding: 0 20px; }
-  .logo-text { font-size: 14px; }
+  .header-inner { padding: 0 20px; justify-content: flex-start; }
+  .logo { flex: 1; }
+  .logo-text { display: none; }
 
   .nav-links {
     position: fixed; top: 0; right: -100%;
@@ -713,7 +714,7 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   }
   .nav-links a.nav-active::after { display: none; }
 
-  .auth-links { gap: 8px; }
+  .auth-links { gap: 12px; margin-right: 20px; }
   .btn-register { padding: 5px 14px; font-size: 12px; }
 
   .hero-section { height: 75vh; }
@@ -725,8 +726,8 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   .carousel-dots { bottom: 60px; }
   .scroll-hint { bottom: 8px; }
 
-  .brand-strip { padding: 36px 20px; }
-  .brand-strip-inner { flex-wrap: wrap; gap: 24px; }
+  .brand-strip { padding: 48px 20px; }
+  .brand-strip-inner { flex-wrap: wrap; gap: 36px 20px; }
   .brand-stat { flex: 1 1 40%; }
   .stat-num { font-size: 28px; }
 
@@ -742,7 +743,8 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   .split-text .accent-title { font-size: 42px; }
   .split-text h3 { font-size: 22px; }
   .split-text a { justify-content: center; }
-  .split-image { width: 100%; }
+  .split-image { width: 100%; padding: 0 16px; box-sizing: border-box; }
+  .section-image { margin-top: 40px; padding: 0 16px; }
 
   .strip-inner { flex-direction: column; text-align: center; gap: 14px; }
   .strip-inner h3 { font-size: 15px; }
@@ -767,7 +769,10 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   .footer-brand-logo { margin: 0 auto 14px; }
   .footer-columns { flex-wrap: wrap; gap: 24px; }
   .footer-columns dl { flex: 1 1 40%; min-width: 130px; }
-  .footer-bottom { padding: 16px 20px 24px; }
+  .footer-bottom { padding: 24px 20px; text-align: center; }
+  .legal-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 12px; }
+  .legal-links a + a::before { display: none; }
+  .legal-links a { padding: 4px 8px; background: rgba(255,255,255,0.04); border-radius: 4px; }
 }
 
 /* ============================
