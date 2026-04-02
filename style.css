@@ -30,12 +30,7 @@
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 body { 
-  font-family: var(--font-cn); background: var(--bg-white); color: var(--text-primary); line-height: 1.6; overflow-x: hidden;
-  animation: pageFadeIn 0.8s ease-out;
-}
-@keyframes pageFadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
+  font-family: var(--font-cn); background: var(--bg-dark); color: var(--text-primary); line-height: 1.6; overflow-x: hidden;
 }
 @keyframes slideDown {
   from { transform: translateY(-20px); opacity: 0; }
