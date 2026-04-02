@@ -29,7 +29,18 @@
    ============================ */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
-body { font-family: var(--font-cn); background: var(--bg-white); color: var(--text-primary); line-height: 1.6; overflow-x: hidden; }
+body { 
+  font-family: var(--font-cn); background: var(--bg-white); color: var(--text-primary); line-height: 1.6; overflow-x: hidden;
+  animation: pageFadeIn 0.8s ease-out;
+}
+@keyframes pageFadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes slideDown {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
 a { text-decoration: none; color: inherit; }
 ul, ol { list-style: none; }
 img { display: block; max-width: 100%; }
@@ -229,6 +240,38 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   0%, 100% { transform: translateX(-50%) translateY(0); }
   50% { transform: translateX(-50%) translateY(8px); }
 }
+
+/* ============================
+   ADVANCED ANIMATIONS
+   ============================ */
+.reveal-up { opacity: 0; transform: translateY(40px); transition: all 0.9s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.reveal-left { opacity: 0; transform: translateX(-40px); transition: all 0.9s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.reveal-right { opacity: 0; transform: translateX(40px); transition: all 0.9s cubic-bezier(0.2, 0.8, 0.2, 1); }
+.reveal-zoom { opacity: 0; transform: scale(0.92); transition: all 0.9s cubic-bezier(0.2, 0.8, 0.2, 1); }
+
+.revealed { opacity: 1 !important; transform: translate(0) scale(1) !important; }
+
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+
+/* Hero Text Sequence Animations */
+.slide .hero-eyebrow,
+.slide h1,
+.slide .hero-desc,
+.slide .hero-btn {
+  opacity: 0; transform: translateY(30px);
+  transition: all 0.8s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+.slide.active .hero-eyebrow { opacity: 1; transform: translateY(0); transition-delay: 300ms; }
+.slide.active h1 { opacity: 1; transform: translateY(0); transition-delay: 400ms; }
+.slide.active .hero-desc { opacity: 1; transform: translateY(0); transition-delay: 500ms; }
+.slide.active .hero-btn { opacity: 1; transform: translateY(0); transition-delay: 600ms; }
+
+/* Slide background gentle scale */
+.slide img { width: 100%; height: 100%; object-fit: cover; transform: scale(1.05); transition: transform 6s ease-out; }
+.slide.active img { transform: scale(1); }
 
 /* ============================
    BRAND STATS STRIP
@@ -500,7 +543,9 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
 .page-hero img {
   position: absolute; inset: 0;
   width: 100%; height: 100%; object-fit: cover; opacity: 0.6;
+  transform: scale(1.1); transition: transform 1.2s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
+.page-hero.revealed img { transform: scale(1); }
 .page-hero-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(to bottom, rgba(0,0,0,0.5), rgba(0,0,0,0.3));
@@ -535,17 +580,19 @@ button { border: none; background: none; cursor: pointer; font: inherit; }
   border: 1px solid var(--border);
   border-radius: var(--radius);
   padding: 40px 28px;
-  transition: all var(--transition);
+  transition: all 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .feature-card:hover {
-  transform: translateY(-6px);
-  box-shadow: var(--shadow-hover);
-  border-color: transparent;
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.06);
+  border-color: rgba(255,103,0,0.1);
 }
+.feature-card:hover .card-icon { transform: scale(1.1) rotate(5deg); }
 .card-icon {
   width: 52px; height: 52px; border-radius: 14px;
   display: grid; place-items: center;
   margin-bottom: 22px; font-size: 26px; color: #fff;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
 }
 .card-icon.orange { background: linear-gradient(135deg, var(--primary), var(--accent-gold)); }
 .card-icon.blue { background: linear-gradient(135deg, #3b82f6, #60a5fa); }

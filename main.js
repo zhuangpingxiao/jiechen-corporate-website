@@ -76,18 +76,17 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ==================== SCROLL REVEAL ====================
-  const revealElements = document.querySelectorAll('.content-section, .cinematic-section');
+  const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-zoom, .page-hero');
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
-      if (entry.isIntersecting) entry.target.classList.add('revealed');
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+        observer.unobserve(entry.target); // uncomment if you only want it to animate once
+      }
     });
-  }, { threshold: 0.1 });
-  revealElements.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-    observer.observe(el);
-  });
+  }, { threshold: 0.15, rootMargin: "0px 0px -50px 0px" });
+  
+  revealElements.forEach(el => observer.observe(el));
   const s = document.createElement('style');
   s.textContent = '.revealed{opacity:1!important;transform:translateY(0)!important}';
   document.head.appendChild(s);

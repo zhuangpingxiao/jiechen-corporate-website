@@ -34,18 +34,15 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', closeMenu));
   }
 
-  // Scroll reveal
-  const els = document.querySelectorAll('.content-section, .cards-grid, .stat-bar, .cta-block');
-  const obs = new IntersectionObserver((entries) => {
-    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('revealed'); });
-  }, { threshold: 0.1 });
-  els.forEach(el => {
-    el.style.opacity = '0';
-    el.style.transform = 'translateY(30px)';
-    el.style.transition = 'opacity 0.7s ease, transform 0.7s ease';
-    obs.observe(el);
-  });
-  const s = document.createElement('style');
-  s.textContent = '.revealed{opacity:1!important;transform:translateY(0)!important}';
-  document.head.appendChild(s);
+  // Scroll reveal refined
+  const revealElements = document.querySelectorAll('.reveal-up, .reveal-left, .reveal-right, .reveal-zoom, .page-hero');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('revealed');
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
+  revealElements.forEach(el => observer.observe(el));
+
 });
